@@ -1,3 +1,9 @@
+
+body {
+    color:black;
+    background-color: #3BA6EC;
+}
+
 #movie-search {
     width: 883px;
     height: 2px;
@@ -18,7 +24,9 @@
 
 #movie-button-area {
     padding: 10px 20px 10px 20px;
-    background-color: #5b1606;
+
+    background-color: black;
+
 }
 
 .movie-col {
@@ -34,18 +42,18 @@
 .movie-button {
     width: 100%;
     height: 100%;
-    color: #250d05;
+    color: black;
     font-weight: bold;
     /* text-shadow: -1px -1px #fff; */
-    background-color: #fccb6f;
 }
 
 .movie-button:hover {
-    background-color: #fc9b4d;
+    background-color: #3BA6EC;
 }
 
 .movie-button-selected {
-    background-color: #be4c1f;
+    background-color: #3BA6EC;
+
 }
 
 #poster {
@@ -68,6 +76,7 @@
     padding-top: 20px;
     padding-bottom: 30px;
 }
+
 
 img {
     height: 360px;
@@ -113,22 +122,17 @@ iframe {
 #goButton,
 #showtimeButton,
 #searchNewMovie {
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
 }
 
 #movieInput {
-    color: whitesmoke;
+    color: white;
     /* background-color: whitesmoke; */
-    border-color: whitesmoke;
+    border-color: white;
 }
-
-placeholder {
-    color: whitesmoke;
-}
-
 #missingInput {
-    color: #1565C0;
+    color: white;
     font-weight: bold;
 }
 
@@ -165,4 +169,77 @@ placeholder {
         width: 500px;
 
     }
+}
+video {
+    position: absolute;
+    top: -10; left: 10px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 100%; width: 100%;
+    /* opacity: 0.6; */
+    z-index: -1;
+} 
+
+#video_cover {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+#goButton, #showtimeButton, #searchNewMovie {
+    /* background-color: rgb(169, 249, 252); */
+    color: black;
+    height: 80px; 
+    width: 120px;   
+    background-image: url(../images/movieB.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 16px;
+    border: 3px solid black;
+    border-radius: 20px 20px;
+    background-color: white;
+    font-weight: bold;
+    
+
+}
+#showtimeButton {
+    margin-left:120px;
+}
+.hero-image {
+    /* The image used */
+    background-image: url(../images/reels.png);
+    /* opacity: 0.8; */
+    /* Set a specific height */
+    height: 250px;
+    background-color:white;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(31, 30, 30);
+    text-shadow: 4px 4px rgb(151, 240, 243);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5em;
+    letter-spacing: 7px;
+    word-spacing: 10px;
+    padding-bottom: 25px;
+  
+}
+img{
+    border: 2px solid white;
+    border-radius: 20px 20px;
+}
+#movie-time {
+    background-color: #3BA6EC;
+    border: 3px solid black;
+    border-radius: 20px 20px;
 }
