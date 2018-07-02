@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieFinder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- google fonts link-->
+    <!-- materialze  and  style.css link  -->
+    <!-- tab icon  and  search icons -->
+    <link rel="icon" href="assets/images/pop1.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <br>
+        <br>
+    </header>  
+    <div class="row">                                      <!-- row to hold movie search form -->
+        <div class="col-md-12">
+
+                </span>
+            </div>
+        </div>
+    </div>                                                 <!-- closing tag for row holding the movie search form -->
+    
+    <div class="container-fluid">
+        <div class="row">                                   <!-- row to hold the movie poster and movie description-->
+            <div class="col-md-5">
+                <div id="poster" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class "text-center">Movie Overview</h3>
+                    </div>
+                    
+                    <div id="image-poster"></div>           <!-- ***** THIS IS WHERE THE MOVIE POSTER WILL GO *****  -->
+                    <div class="posterinfo">        
+                    <p id="description"> </p>               <!-- ***** THIS IS WHERE THE MOVIE DESCRIPTION WILL GO *****  -->
+                        
+                    </div>
+
+                    <div class="info">
+                        <p class="" id="rating"></p>        <!-- ***** THIS IS WHERE THE MOVIE RATING WILL GO *****  -->
+                        <p class="" id="runtime"></p>       <!-- ***** THIS IS WHERE THE MOVIE RUNTIME WILL GO *****  -->
+                        <p class="" id="releasedate"></p>   <!-- ***** THIS IS WHERE THE MOVIE RELEASE DATE WILL GO *****  -->
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div id="trailer" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center">Trailer</h3>    
+                    </div>
+                    
+                    <span class="trailer"></span>               <!-- ***** THIS IS WHERE THE TRAILER WILL GO *****  -->
+                </div>
+            </div>
+        </div>                                                  <!-- closing tag for row holding the movie poster and overview -->
+    </div>                                                  
+    
+    <div id "container">
+        <div class="row">                                       <!-- row to hold showtime search and table -->
+            
+            <div class="col-md-2"></div>                        <!-- empty div to get row to equal 12 -->
+
+            <div class="col-md-8">                                  <!-- div to hold showtime search and table display -->
+                <div id="movie-time" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class "text-center">Search For Movies Playing In Theaters</h3>
+                        <p id="missingInput"></p>
+                        <div id="zip-search" class="input-group">
+                            <i class="material-icons">add_location</i>
+                            <input type="number" class="form-control" id="zipCodeField" placeholder="Enter a 5-digit zip code">
+                        </div>
+                        <br>
+                        <div id="pickDate" class="input-group">
+                            <i class="material-icons">date_range</i>
+                            <input type="date" class="form-control" id="dateField" placeholder="Choose a date">
+                        </div>
+                        <br>
+                        <span class="input-group-btn" id="searchButtons">
+                            <button class="btn btn-default" id="showtimeButton" type="button">Go!</button>
+                        </span>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="text-center">Movies Currently In Theaters</h4>
+                            <div class="column" id="leftColumn">
+                                <p id="leftSide"></p>
+                            </div>
+                            <div class="column" id="rightColumn">
+                                <p id="rightSide"></p>
+                            </div>
+                            <!-- this is for the table that holds the showtimes results  -->
+                            <table style="width:100%" id="showtimeTable">
+                                <tr>
+                                    <!-- <th>Movie</th>  -->
+                                    <th>Movie</th>
+                                    <th>Theatres Playing Your Selected Movie</th>
+                                    <th>Showtimes</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>                                                  <!-- closing tag for div holding showtime search and table display -->
+            
+            <div class="col-md-2"></div>                             <!-- empty div to get row to equal 12 -->
+        
+        </div>                                                      <!-- closing tag for container holding showtime search and table -->
+    </div>
+
+    
+    <!-- jQuery  and  javascript links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript.js"></script>
+
+
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- moment.js  and  materialize js  links-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.2.1/moment.min.js"></script> 
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+</body>
+
+</html>
