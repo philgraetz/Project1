@@ -1,8 +1,9 @@
-const TMS_API_KEY1 = "dwr96fj3wnx5kp79uhbvs8fr";
-const TMS_API_KEY2 = "dwr96fj3wnx5kp79uhbvs8fr";
+const TMS_API_KEY1 = "qcw98up43djnn38bmwsh739a";
+const TMS_API_KEY2 = "rgf2xy8vkcqdpwq3ksjz44b5";
 const TMS_API_KEY_TO_USE = TMS_API_KEY1;
-const SAVE_TMS_DATA = true;
+const SAVE_TMS_DATA = false;
 const USE_TMS_DATA = false;
+
 function omdbAPIFunc(input){                    // function that calls the OMDb API (used for poster and overview)
 
     var queryURL = "https://www.omdbapi.com/?t=" + input + "&y=&plot=full&apikey=ccaa8d15";
@@ -72,7 +73,9 @@ function findMovies() {
     var newSearchButton = $("<button>").attr("class", "btn btn-default");
     $(newSearchButton).attr("type", "button");
     $(newSearchButton).attr("id", "searchNewMovie");
+
     $(newSearchButton).html("New search");
+
 
     $("#searchButtons").append(newSearchButton);
 
@@ -146,7 +149,9 @@ function processMovieResults(results) {
         // (Otherwise continue to use thisRow)
         if (colNumber === 0) {
             thisRow = $("<div>");
+
             thisRow.addClass("row movie-row animated rubberBand");
+
             $("#movie-button-area").append(thisRow);
         }
 

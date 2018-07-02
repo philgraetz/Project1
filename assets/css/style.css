@@ -1,7 +1,9 @@
+
 body {
     color:black;
     background-color: #3BA6EC;
 }
+
 #movie-search {
     width: 883px;
     height: 2px;
@@ -22,7 +24,9 @@ body {
 
 #movie-button-area {
     padding: 10px 20px 10px 20px;
+
     background-color: black;
+
 }
 
 .movie-col {
@@ -49,6 +53,7 @@ body {
 
 .movie-button-selected {
     background-color: #3BA6EC;
+
 }
 
 #poster {
@@ -72,10 +77,11 @@ body {
     padding-bottom: 30px;
 }
 
-/* img {
+
+img {
     height: 360px;
     width: 290px;
-} */
+}
 
 .posterinfo {
     padding: 12px;
