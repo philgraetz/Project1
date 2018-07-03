@@ -1,3 +1,4 @@
+
 body {
     color:black;
     font-family: 'Lato', sans-serif;
@@ -103,7 +104,9 @@ video {
 
 #movie-button-area {
     padding: 10px 20px 10px 20px;
+
     background-color: black;
+
 }
 
 .movie-col {
@@ -152,7 +155,6 @@ video {
     padding-top: 20px;
     padding-bottom: 30px;
 }
-
 
 .posterinfo {
     padding: 12px;

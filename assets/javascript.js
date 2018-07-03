@@ -1,11 +1,11 @@
-const TMS_API_KEY1 = "dwr96fj3wnx5kp79uhbvs8fr";
-const TMS_API_KEY2 = "dwr96fj3wnx5kp79uhbvs8fr";
+
 const TMS_API_KEY_TO_USE = TMS_API_KEY1;
-const SAVE_TMS_DATA = true;
+const SAVE_TMS_DATA = false;
 const USE_TMS_DATA = false;
+
 function omdbAPIFunc(input){                    // function that calls the OMDb API (used for poster and overview)
 
-    var queryURL = "https://www.omdbapi.com/?t=" + input + "&y=&plot=full&apikey=ccaa8d15";
+    var queryURL = "https://www.omdbapi.com/?t=" + input + "&y=&plot=full&apikey=" + omdbkey;
     //ajax function
     $.ajax({
         url: queryURL,
@@ -46,7 +46,7 @@ $("#goButton").on("click", function () {                                        
 });
 // end of gobutton onclick function
 $("#showtimeButton").on("click", function () {
-
+    $("#searchNewMovie").remove();
     var userZipCodeInput = $("#zipCodeField").val().trim();
     console.log(userZipCodeInput);
 
@@ -73,7 +73,6 @@ function findMovies() {
     $(newSearchButton).attr("type", "button");
     $(newSearchButton).attr("id", "searchNewMovie");
     $(newSearchButton).html("Cut!");
-
     $("#searchButtons").append(newSearchButton);
 
     var userZipCodeInput = $("#zipCodeField").val().trim();
@@ -146,7 +145,9 @@ function processMovieResults(results) {
         // (Otherwise continue to use thisRow)
         if (colNumber === 0) {
             thisRow = $("<div>");
+
             thisRow.addClass("row movie-row animated rubberBand");
+
             $("#movie-button-area").append(thisRow);
         }
 
@@ -214,7 +215,7 @@ function youtubeFunc(input) {
         type: "&type=video",
         q: "&q=" + input + " official movie trailer",
         videoEmbed: "&videoEmbeddable=true",
-        key: "&key=AIzaSyA48DgSrZgc7HxXqMqf1nwRIgn7pfYq_Ig"
+        key: "&key=" + ytkey
     };
     $.ajax({
         url: youTubeAPI.url + youTubeAPI.part + youTubeAPI.results + youTubeAPI.type + youTubeAPI.q + youTubeAPI.videoEmbed + youTubeAPI.key,
