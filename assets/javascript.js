@@ -72,7 +72,7 @@ function findMovies() {
     var newSearchButton = $("<button>").attr("class", "btn btn-default");
     $(newSearchButton).attr("type", "button");
     $(newSearchButton).attr("id", "searchNewMovie");
-    $(newSearchButton).html("New search");
+    $(newSearchButton).html("Cut!");
 
     $("#searchButtons").append(newSearchButton);
 
