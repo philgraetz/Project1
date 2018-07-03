@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <!-- google fonts link-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
     <!-- materialze  and  style.css link  -->
 
     <link rel="stylesheet" href="assets/animate.css">
@@ -20,32 +21,34 @@
 </head>
 
 <body>
-
-        <video autoplay muted loop>
-                <source src="assets/images/hd0911.mov" type="video/mp4">
-            </video>
-            <div id="video_cover"></div>
-        
     <!-- Find a Movie header -->
     <div class="hero-image">
         <div class="hero-text">
-          <p>Project Name</p>
+            <p>"Amet Locus"</p>
+            <p id="findM" >Find a movie</p>
+            <video autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
+            <video id="video2" autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
+            <video id="video3" autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
         </div>
-      </div>
-      <!-- <video autoplay muted loop>
-            <source src="assets/images/hd0911.mov" type="video/mp4">
-        </video>
-        <div id="video_cover"></div>
-     -->
+    </div>
 
     <div class="container-fluid">
         <div class="row">
-                
+
             <!-- row to hold the movie poster and movie description-->
             <div id="omdb" class="col-md-6">
                 <div id="poster" class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="text-center animated fadeInLeft">Movie Overview</h3>
+                        <h3 class="text-center animated fadeInLeft title">Movie Overview</h3>
                     </div>
 
                     <div id="image-poster"></div>
@@ -68,10 +71,10 @@
                 </div>
             </div>
 
-            <div id="youtube" class="col-md-6">
+            <div id="youtube" class="col-md-3">
                 <div id="trailer" class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="text-center animated fadeInLeft">Trailer</h3>
+                        <h3 class="text-center animated fadeInLeft title">Trailer</h3>
                     </div>
 
                     <span class="trailer"></span>
@@ -94,21 +97,28 @@
                 <!-- div to hold showtime search and table display -->
                 <div id="movie-time" class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class "text-center">Search For Movies Playing In Theaters</h3>
+                        <h3 id="searchMovieT" class "text-center">Search For Movies Playing In Theaters</h3>
+                        <hr>
                         <p id="missingInput"></p>
                         <div id="zip-search" class="input-group">
                             <i class="material-icons">add_location</i>
-                            <input type="number" class="form-control" id="zipCodeField" placeholder="Enter a 5-digit zip code">
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" id="zipCodeField" placeholder="Enter a 5-digit zip code">
+
+                            </div>
                         </div>
                         <br>
                         <div id="pickDate" class="input-group">
                             <i class="material-icons">date_range</i>
-                            <input type="date" class="form-control" id="dateField" placeholder="Choose a date">
+                            <div class="col-md-6">
+                                <input type="date" class="form-control" id="dateField" placeholder="Choose a date">
+                            </div>
                         </div>
                         <br>
 
                         <span class="input-group-btn animated fadeInLeft" id="searchButtons">
-                            <button class="btn btn-default" id="showtimeButton" type="button">Go!</button>
+                            <button class="btn btn-default" id="showtimeButton" type="button">Action!</button>
+                        </span>
                         </span>
                         <br>
                     </div>
@@ -120,11 +130,23 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-center animated fadeInLeft">Movies Currently In Theaters</h4>
+                <h4 class="text-center animated fadeInLeft title">Movies Currently In Theaters</h4>
                 <!-- == MOVIE LIST == -->
                 <div id="movie-button-area"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-4" id="movie-headers">
+                <h5>Movie:</h5>
+            </div>
+            <div class="col-sm-4" id="movie-headers">
+                    <h5>Theatres Playing Your Selected Movie:</h5>
+                </div>
+              
+                <div class="col-sm-4" id="movie-headers">
+                        <h5>Showtimes:</h5>
+                    </div>
+                </div>
 
         <div class="row">
             <div class="col-md-12">
@@ -132,17 +154,15 @@
                 <table style="width:100%" id="showtimeTable">
                     <tr>
                         <!-- <th>Movie</th>  -->
-                        <th>Movie</th>
-                        <th>Theatres Playing Your Selected Movie</th>
-                        <th>Showtimes</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </table>
             </div>
         </div>
         <!-- closing tag for div holding showtime search and table display -->
-
     </div>
-
 
     <!-- jQuery  and  javascript links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
