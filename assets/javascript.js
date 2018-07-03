@@ -1,12 +1,11 @@
-const TMS_API_KEY1 = "qcw98up43djnn38bmwsh739a";
-const TMS_API_KEY2 = "rgf2xy8vkcqdpwq3ksjz44b5";
+
 const TMS_API_KEY_TO_USE = TMS_API_KEY1;
 const SAVE_TMS_DATA = false;
 const USE_TMS_DATA = false;
 
 function omdbAPIFunc(input){                    // function that calls the OMDb API (used for poster and overview)
 
-    var queryURL = "https://www.omdbapi.com/?t=" + input + "&y=&plot=full&apikey=ccaa8d15";
+    var queryURL = "https://www.omdbapi.com/?t=" + input + "&y=&plot=full&apikey=" + omdbkey;
     //ajax function
     $.ajax({
         url: queryURL,
@@ -219,7 +218,7 @@ function youtubeFunc(input) {
         type: "&type=video",
         q: "&q=" + input + " official movie trailer",
         videoEmbed: "&videoEmbeddable=true",
-        key: "&key=AIzaSyA48DgSrZgc7HxXqMqf1nwRIgn7pfYq_Ig"
+        key: "&key=" + ytkey
     };
     $.ajax({
         url: youTubeAPI.url + youTubeAPI.part + youTubeAPI.results + youTubeAPI.type + youTubeAPI.q + youTubeAPI.videoEmbed + youTubeAPI.key,
