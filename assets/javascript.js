@@ -47,7 +47,7 @@ $("#goButton").on("click", function () {                                        
 });
 // end of gobutton onclick function
 $("#showtimeButton").on("click", function () {
-
+    $("#searchNewMovie").remove();
     var userZipCodeInput = $("#zipCodeField").val().trim();
     console.log(userZipCodeInput);
 
